@@ -14,4 +14,7 @@ Given the extensive volume and granularity of the data involved, traditional dat
 
 **Scalable Computing Methods Used**
 
-1. 
+1. **Data Processing at Scale:** Utilizing Spark to handle large-scale data transformation and preprocessing. Spark's ability to perform in-memory computations significantly speeds up data processing tasks such as filtering, aggregation, and joining multiple data sources.
+2. **Machine Learning at Scale:** Implementing machine learning models using Spark MLlib to predict student performance. MLlib provides a suite of scalable machine learning algorithms which are designed to efficiently run on big data.
+3. **Distributed Data Storage:** Storing and managing data using Amazon S3 and integrating it seamlessly with Spark for distributed processing. This step ensures that data accessibility and management are optimized for high performance and scalability.
+4. **Visualization and Reporting:** Developing interactive dashboards using Plotly, hosted on AWS to ensure scalability and real-time data interaction.
