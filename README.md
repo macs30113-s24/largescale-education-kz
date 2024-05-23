@@ -1,4 +1,7 @@
 # 30113 Final Project: Online Education Participation Analysis Using Large-Scale Data
+## Kexin Zhang
+
+### Link to Code: [project code](https://github.com/macs30113-s24/final-project-kz/blob/main/project%20code.ipynb)
 
 ### Project Overview
 
