@@ -17,7 +17,6 @@ Given the extensive volume and granularity of the data involved, traditional dat
 1. **Data Processing at Scale:** Utilized Spark to manage and preprocess large-scale data. The in-memory computation capabilities of Spark were instrumental in speeding up essential data processing tasks, including filtering, aggregation, and merging datasets.
 2. **Machine Learning at Scale:** Applied machine learning models using Spark MLlib to analyze student performance. MLlib's reliable and scalable machine learning algorithms facilitated efficient processing of extensive data, enhancing the predictive analysis.
 3. **Distributed Data Storage:** This project did not implement Amazon S3 for data storage as initially planned. Instead, data processing was conducted locally using Spark, which sufficiently supported the project's scale. Future enhancements may include the integration of Amazon S3 to handle larger datasets and facilitate distributed processing.
-4. **Visualization and Reporting:** Interactive visualizations were created using libraries such as Matplotlib and Seaborn within the local development environment. While AWS was not utilized for hosting these visualizations, this approach allowed for effective analysis and representation of data trends and patterns.
 
 ### Dataset Description
 
@@ -55,14 +54,16 @@ The project uses machine learning techniques to predict student performance on n
 
 ### Expected Outcomes
 
-The analysis aims to provide:
-1. Insights into factors that most significantly impact student performance.
-2. Predictive models that can forecast student success in exercises, enabling personalized learning paths.
-3. Recommendations for educational content developers on how to structure exercises to maximize student engagement and success.
+The analysis provides:
+1. **Insights into Key Factors:** The project identifies detailed insights into factors that significantly impact student performance, such as time spent on exercises, the number of attempts, and hint usage. These insights are crucial for understanding the behaviors associated with higher success rates in online exercises.
+2. **Predictive Models for Student Success:** Strong predictive models, including logistic regression and random forest, have been developed to forecast student success in exercises.  These models achieve high accuracy, indicating their effectiveness in predicting outcomes based on students' interaction data.
+3. **Actionable Recommendations:** The analysis offers actionable recommendations for educational content developers on how to structure exercises to maximize student engagement and success. This includes emphasizing adaptive learning paths that cater to the diverse needs of students.
 
-### Conclusion
-
-This project not only aims to push the boundaries of applying machine learning to educational data but also seeks to provide actionable insights that can be used by educators and content creators to improve the efficacy of online learning.
+### Limitations
+There are several limitations to consider:
+1. **Data Dependency:** The predictive power of the models is heavily reliant on the quality and breadth of the dataset. The current dataset may not involve all factors that influence student performance, such as external learning activities or personal circumstances.
+2. **Scope of Data:** The findings are based on data from a single educational platform, which may limit their applicability to other educational systems. The behaviors and patterns observed may not fully represent those of students in different settings.
+3. **Model Generalizability:** While the models achieved high accuracy, their ability to generalize to other datasets is not guaranteed. The specific characteristics of the Junyi Academy dataset could influence the model performance, which may differ when applied to other datasets.
 
 ### Acknowledgments
 This project utilizes the Junyi Academy Online Learning Activity Dataset, a comprehensive dataset released by the Junyi Academy Foundation. Junyi Academy, a non-profit organization based in Taiwan, is committed to providing equitable quality education through technological solutions, supporting a wide range of educational research and practical applications. Their dedication to educational equity and data transparency significantly contributes to the advancement of educational technologies and methodologies.
