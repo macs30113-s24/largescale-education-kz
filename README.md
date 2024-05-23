@@ -22,6 +22,7 @@ Given the extensive volume and granularity of the data involved, traditional dat
 
 
 ### Dataset Description
+Since the dataset is too large to upload on GitHub, I've included a link to the dataset here: [Junyi Academy dataset](https://www.kaggle.com/datasets/junyiacademy/learning-activity-public-dataset-by-junyi-academy?select=Log_Problem.csv)
 
 The dataset comprises three main files:
 1. Info_Content.csv: Metadata about the exercises, including their difficulty level and subject.
