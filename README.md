@@ -1,7 +1,7 @@
 # 30113 Final Project: Online Education Participation Analysis Using Large-Scale Data
 ## Kexin Zhang
 
-### Link to Code:
+### Link to Code
 1. [Part 1 - Data Exploration and Preprocessing.ipynb](https://github.com/macs30113-s24/final-project-kz/blob/main/Part%201%20-%20Data%20Exploration%20and%20Preprocessing.ipynb)
 2. [Part 2 - Student Success and Engagement Metrics Calculation.ipynb](https://github.com/macs30113-s24/final-project-kz/blob/main/Part%202%20-%20Student%20Success%20and%20Engagement%20Metrics%20Calculation.ipynb)
 3. [Part 3 - In-depth Analysis and Visualization.ipynb](https://github.com/macs30113-s24/final-project-kz/blob/main/Part%203%20-%20In-depth%20Analysis%20and%20Visualization.ipynb)
@@ -55,7 +55,7 @@ To further elucidate these findings, various visualizations have been created:
 ![image](https://github.com/macs30113-s24/final-project-kz/assets/143459510/aef8f80a-147b-47de-821b-db14bdc4235c)
 2. **Engagement and Scores Analysis:**  Scatter plots that map the relationship between time spent on tasks and actual scores, revealing patterns in student engagement and learning efficiency.
 ![image](https://github.com/macs30113-s24/final-project-kz/assets/143459510/5e67643b-dfa2-4cad-8361-56d1b2dd60e0)
-3. **Comparative Analysis Across Groups:** Bar charts that compare performance and engagement between self-coached students and those with formal guidance, shedding light on the effectiveness of different learning ways.
+3. **Comparative Analysis across Groups:** Bar charts that compare performance and engagement between self-coached students and those with formal guidance, shedding light on the effectiveness of different learning ways.
 ![image](https://github.com/macs30113-s24/final-project-kz/assets/143459510/a0c7eb68-2023-416d-99b6-658a5640d9da)
 
 ### Project Outcomes and Implications
