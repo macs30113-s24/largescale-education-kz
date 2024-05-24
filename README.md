@@ -26,49 +26,65 @@ Given the extensive volume and granularity of the data involved, traditional dat
 
 
 ### Dataset Description
-Since the dataset is too large to upload on GitHub, I've included a link to the dataset here: [Junyi Academy dataset](https://www.kaggle.com/datasets/junyiacademy/learning-activity-public-dataset-by-junyi-academy?select=Log_Problem.csv)
-
-The dataset comprises three main files:
+The dataset includes:
 1. `Info_Content.csv`: Metadata about the exercises, including their difficulty level and subject.
 2. `Info_UserData.csv`: Demographic and educational background of the students.
 3. `Log_Problem.csv`: Records of student problem-solving attempts, including timestamps, correctness, and hints used.
 
-### Predictive Modeling
-The project uses machine learning techniques to predict student performance on new exercises. It utilizes both logistic regression and random forest algorithms within Spark's MLlib, which are particularly suited for handling large datasets. Logistic regression helps estimate the probability of a student's success based on historical data, focusing on factors like time spent on tasks and the number of attempts. Similarly, the random forest model aggregates decisions from multiple decision trees to improve predictive accuracy and prevent overfitting. The logistic regression model is cross-validated to ensure robustness and improve the predictive reliability when applied to unseen data. With the use of this approach, personalized educational strategies may be developed by obtaining a more detailed understanding of the factors that have an important impact on students' outcomes.
+Access the dataset [here](https://www.kaggle.com/datasets/junyiacademy/learning-activity-public-dataset-by-junyi-academy?select=Log_Problem.csv).
 
-### Results and Interpretation
+### Analysis and Insights
+#### Predictive Modeling Techniques
+This project uses advanced machine learning techniques within Spark's MLlib to predict student performance on new exercises, utilizing both logistic regression and random forest algorithms. These algorithms are particularly well-suited for handling large datasets:
+  - **Logistic Regression:** Helps estimate the probability of a student's success based on historical data, with an emphasis on factors such as time spent on tasks and the number of attempts. This model is cross-validated to ensure robustness and predictive reliability on unseen data.
+  - **Random Forest:** Aggregates decisions from multiple decision trees to enhance predictive accuracy and prevent overfitting, making it an effective tool for deriving reliable insights from complex, multifaceted data.
 
-#### Feature Importance:
-1. **Total Attempts (Coefficient: -2.197):** More attempts per problem indicate lower chances of success, suggesting students struggle with certain problems.
-2. **Hints Used (Coefficient: -2.707):** Higher use of hints correlates with lower success rates, implying dependency on hints is a sign of difficulty.
-3. **Time Spent (Coefficient: 0.0):** Time spent per problem does not significantly impact success, suggesting other factors are more crucial.
+#### Model Performance and Feature Importance
+The efficacy of these models is underscored by their high accuracy rates, which were meticulously validated using cross-validation techniques to ensure their generalizability across various datasets:
+  - **Logistic Regression:** Achieved an accuracy of approximately 99.65%.
+  - **Random Forest:** Demonstrated a similarly high accuracy of about 99.65%.
 
-#### Model Performance:
-1. **Coefficients:** The logistic regression model's coefficients reveal the influence of each feature on predicting student success, with the direction and magnitude of impact provided for deeper insights.
-2. **Accuracy:** The model's accuracy is evaluated using cross-validation, ensuring robustness and generalizability of the predictive power.
-    - **Logistic Regression:** The logistic regression model achieved an accuracy of approximately **99.65%**, indicating a high level of predictive performance. This accuracy was validated using cross-validation techniques to ensure the model's generalizability across different datasets.
-    - **Random Forest:** Similarly, the random forest model demonstrated a high accuracy of about **99.65%**. The consistency of this accuracy across different modeling techniques underscores the reliability of the predictive insights generated.
+The models' coefficients provide insights into the influence of each feature on student success:
+1. **Total Attempts (Coefficient: -2.197):** Indicates that more attempts per problem generally lead to lower success rates, suggesting areas where students face challenges.
+2. **Hints Used (Coefficient: -2.707):** A high usage of hints correlates with lower success rates, pointing to dependencies that may hinder independent problem-solving skills.
+3. **Time Spent (Coefficient: 0.0):** Surprisingly, time spent on tasks does not significantly impact success, highlighting that other factors may play a more important role.
   
-#### Visualization (more in code):
-1. **Performance by Grade:** Visualizations show how average scores distributed by grade, providing insights into how different groups perform.
+#### Visualizations and Comparative Analysis
+To further elucidate these findings, various visualizations have been created:
+1. **Performance by Grade:** Charts that show how average scores are distributed across different grades, providing insights into educational disparities or curriculum effectiveness.
 ![image](https://github.com/macs30113-s24/final-project-kz/assets/143459510/aef8f80a-147b-47de-821b-db14bdc4235c)
-2. **Engagement and Scores Analysis:** Scatter plots highlight the relationship between time spent and scores, revealing patterns in student engagement.
+2. **Engagement and Scores Analysis:**  Scatter plots that map the relationship between time spent on tasks and actual scores, revealing patterns in student engagement and learning efficiency.
 ![image](https://github.com/macs30113-s24/final-project-kz/assets/143459510/5e67643b-dfa2-4cad-8361-56d1b2dd60e0)
-3. **Comparative Analysis Across Groups** Bar charts indicates performance and engagement between self-coached students and those who are not self-coached.
+3. **Comparative Analysis Across Groups:** Bar charts that compare performance and engagement between self-coached students and those with formal guidance, shedding light on the effectiveness of different learning ways.
 ![image](https://github.com/macs30113-s24/final-project-kz/assets/143459510/a0c7eb68-2023-416d-99b6-658a5640d9da)
 
+### Project Outcomes and Implications
+#### Insights into Key Factors
+This analysis has explored critical factors that significantly influence student performance within online learning platforms:
+1. **Time Spent on Exercises:** Although time spent did not show a direct correlation with success, its role combined with other factors suggests complex dynamics in learning behaviors.
+2. **Number of Attempts:** A higher number of attempts tends to correlate negatively with student success, indicating areas where students struggle and may need additional support.
+3. **Hint Usage:** Frequent use of hints is associated with lower performance, suggesting that reliance on aids could be counterproductive without proper guidance.
 
-### Expected Outcomes
-The analysis provides:
-1. **Insights into Key Factors:** The project identifies detailed insights into factors that significantly impact student performance, such as time spent on exercises, the number of attempts, and hint usage. These insights are crucial for understanding the behaviors associated with higher success rates in online exercises.
-2. **Predictive Models for Student Success:** Strong predictive models, including logistic regression and random forest, have been developed to forecast student success in exercises.  These models achieve high accuracy, indicating their effectiveness in predicting outcomes based on students' interaction data.
-3. **Actionable Recommendations:** The analysis offers actionable recommendations for educational content developers on how to structure exercises to maximize student engagement and success. This includes emphasizing adaptive learning paths that cater to the diverse needs of students.
+These insights are vital for understanding and distinguishing behaviors that contribute to or detract from student success in online exercises.
+
+#### Predictive Models for Student Success
+The project has successfully developed and validated robust predictive models using logistic regression and random forest techniques:
+  - **Logistic Regression** and **Random Forest Models** both achieved an impressive accuracy of approximately 99.65%, demonstrating their effectiveness in forecasting student outcomes. These models are particularly adept at processing large volumes of data to identify underlying patterns that can predict student performance.
+
+#### Actionable Recommendations
+Based on the findings, this analysis provides actionable recommendations aimed at educational content developers:
+  - **Exercise Structuring:** Suggestions on how to design exercises that engage students effectively, thereby enhancing learning outcomes.
+  - **Adaptive Learning Paths:** Emphasizing the importance of adaptive learning environments that can accommodate individual learning styles and paces, ensuring that all students can benefit from personal educational experiences.
+
+These recommendations are intended to help educators and developers optimize online learning platforms, making them more effective and responsive to the diverse needs of students.
 
 ### Limitations
 There are several limitations to consider:
 1. **Data Dependency:** The predictive power of the models is heavily reliant on the quality and breadth of the dataset. The current dataset may not involve all factors that influence student performance, such as external learning activities or personal circumstances.
 2. **Scope of Data:** The findings are based on data from a single educational platform, which may limit their applicability to other educational systems. The behaviors and patterns observed may not fully represent those of students in different settings.
 3. **Model Generalizability:** While the models achieved high accuracy, their ability to generalize to other datasets is not guaranteed. The specific characteristics of the Junyi Academy dataset could influence the model performance, which may differ when applied to other datasets.
+
+Addressing these limitations in future research could provide more generalized insights, ultimately improving educational strategies and interventions across diverse learning environments.
 
 ### Acknowledgments
 This project utilizes the Junyi Academy Online Learning Activity Dataset, a comprehensive dataset released by the Junyi Academy Foundation. Junyi Academy, a non-profit organization based in Taiwan, is committed to providing equitable quality education through technological solutions, supporting a wide range of educational research and practical applications. Their dedication to educational equity and data transparency significantly contributes to the advancement of educational technologies and methodologies.
