@@ -1,7 +1,11 @@
 # 30113 Final Project: Online Education Participation Analysis Using Large-Scale Data
 ## Kexin Zhang
 
-### Link to Code: [project code.ipynb](https://github.com/macs30113-s24/final-project-kz/blob/main/project%20code.ipynb)
+### Link to Code:
+1. [Part 1 - Data Exploration and Preprocessing.ipynb](https://github.com/macs30113-s24/final-project-kz/blob/main/Part%201%20-%20Data%20Exploration%20and%20Preprocessing.ipynb)
+2. [Part 2 - Student Success and Engagement Metrics Calculation.ipynb](https://github.com/macs30113-s24/final-project-kz/blob/main/Part%202%20-%20Student%20Success%20and%20Engagement%20Metrics%20Calculation.ipynb)
+3. [Part 3 - In-depth Analysis and Visualization.ipynb](https://github.com/macs30113-s24/final-project-kz/blob/main/Part%203%20-%20In-depth%20Analysis%20and%20Visualization.ipynb)
+4. [Part 4 - Model Building and Validation.ipynb](https://github.com/macs30113-s24/final-project-kz/blob/main/Part%204%20-%20Model%20Building%20and%20Validation.ipynb)
 
 ### Project Overview
 With the rapid transition to digital platforms in education, understanding student engagement and performance in online learning environments has become an esssential area of focus. This project utilizes a large-scale dataset provided by Junyi Academy, a non-profit educational organization based in Taiwan, which consists of over 16 million exercise logs from more than 72,000 students and spans from August 2018 to July 2019. The goal is to use this rich dataset to predict student performance and engagement patterns, facilitating the development of more effective and personalized online learning experiences.
